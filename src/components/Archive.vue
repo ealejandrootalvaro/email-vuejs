@@ -17,10 +17,12 @@ export default {
 
   data(){
     return {
-      emails: [
-        {asunto: "Soy un email de archive", contenido: "Soy el contenido", from: "Edwin", to: "Victor"},
-        {asunto: "Hola mundo 2", contenido: "Soy el contenido 2", from: "Edwin", to: "Victor"}
-      ]
+    }
+  },
+
+  computed: {
+    emails(){
+      return this.$store.getters.archive
     }
   }
 

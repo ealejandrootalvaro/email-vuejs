@@ -10,20 +10,20 @@
 
 import Emails from './Emails'
 
-export default {
 
+export default {
   components: {
     Emails
   },
 
-  data(){
-    return {
-      emails: [
-        {asunto: "Hola mundo", contenido: "Soy el contenido", from: "Edwin", to: "Victor"},
-        {asunto: "Hola mundo 2", contenido: "Soy el contenido 2", from: "Edwin", to: "Victor"},
-        {asunto: "Hola soy el email de victor", contenido: "Soy el contenido", from: "Victor", to: "Edwin"}
-      ]
+  computed: {
+    emails(){
+      return this.$store.getters.inbox
     }
+  },
+
+  data(){
+    return {}
   }
 }
 
