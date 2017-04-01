@@ -31,6 +31,10 @@ const getters = {
   },
   trash: state => {
     return state.emails.filter(email => email.carpeta == 'Trash')
+  },
+
+  sent: state => {
+    return state.emails.filter(email => email.carpeta == 'Send')
   }
 }
 

@@ -23,6 +23,7 @@
               <td v-on:click="seleccionarEmail(email)">{{email.to}}</td>
               <td v-on:click="seleccionarEmail(email)">{{email.asunto}}</td>
               <td v-on:click="toggleFavorite(email)" align="center" v-bind:class="{favorito: email.favorite}"><i class="fa fa-star" aria-hidden="true"></i></td>
+              
             </tr>
           </tbody>
         </table>
