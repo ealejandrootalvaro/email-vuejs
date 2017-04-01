@@ -3,5 +3,5 @@ export const addEmail = ({ dispatch }) => {
 }
 
 export const updateActiveEmail = ({ dispatch }, email) => {
-  dispatch('SET_ACTIVE_NOTE', email)
+  dispatch('SET_ACTIVE_EMAIL', email)
 }

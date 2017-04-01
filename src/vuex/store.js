@@ -5,8 +5,16 @@ Vue.use(Vuex)
 
 const state = {
   emails: [
-    {from: 'Victor', to: 'Edwin',asunto: 'Prueba Vuex',contenido:  'Hola mundo', carpeta: 'Inbox'},
-    {from: 'Victor', to: 'Edwin',asunto: 'Prueba Vuex - Archivo',contenido:  'Hola mundo', carpeta: 'Archive'}
+    {from: 'Pepito Perez', to: 'Lucia',asunto: 'Prueba Vuex',contenido:  'Hola mundo', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Victor',asunto: 'Prueba Vuex - Archivo',contenido:  'Aliquam quis tristique dui. Suspendisse potenti.', carpeta: 'Inbox',  favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Correo', contenido: 'Donec laoreet, felis a facilisis dapibus, nulla libero accumsan enim, vitae viverra massa lorem at elit.', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Correo', contenido: 'Aliquam quis tristique dui. Suspendisse potenti.', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Correo', contenido: 'Contenido', carpeta: 'Sent', favorite: false},
+    {from: 'Pepito Perez', to: 'Victor',asunto: 'Prueba Vuex - Archivo',contenido:  'Hola mundo', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Praesent ac lacinia urna, vitae malesuada ligula. Etiam blandit arcu eget odio porta lacinia. Praesent quis urna aliquet, molestie justo fringilla, viverra metus. ', contenido: 'Donec laoreet, felis a facilisis dapibus, nulla libero accumsan enim, vitae viverra massa lorem at elit.', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Santiago', asunto: 'Prueba', contenido: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nulla iaculis, aliquet felis quis, eleifend sapien. Etiam sollicitudin lobortis dui in porta. Quisque et laoreet nibh. Aliquam non rutrum nulla. Donec facilisis eleifend nulla et tempor. Pellentesque ultricies lorem consectetur iaculis pellentesque. ', carpeta: 'Inbox', favorite: false},
+    {from: 'Pepito Perez', to: 'Edwin', asunto: 'Correo', contenido: 'Phasellus sit amet ipsum dui.', carpeta: 'Sent', favorite: false},
+
   ],
   activeEmail: {}
 }
@@ -16,7 +24,7 @@ const getters = {
     return state.emails.filter(email => email.carpeta == 'Inbox')
   },
   archive: state => {
-    return state.emails.filter(email => email.carpeta == 'Archive')
+    return state.emails.filter(email => email.favorite)
   },
   trash: state => {
     return state.emails.filter(email => email.carpeta == 'Trash')
@@ -35,7 +43,7 @@ const mutations = {
     carpeta: ''
   }
     // only mutators can mutate the state
-    state.emails.push(newNote)
+    state.emails.push(newEmail)
     state.activeEmail = newEmail
   },
 
@@ -45,6 +53,16 @@ const mutations = {
 
   SET_ACTIVE_EMAIL (state, email){
     state.activeEmail = email
+  },
+
+  REMOVE_EMAIL(state,email){
+
+    var index = state.emails.indexOf(email);
+    state.emails.splice(index,1);
+  },
+
+  TOGGLE_FAVORITE(state,email){
+    email.favorite = !email.favorite;
   }
 
 

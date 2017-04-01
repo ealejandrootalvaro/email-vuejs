@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   .cabecera{
     padding: 30px;
     border-radius: 30px;
