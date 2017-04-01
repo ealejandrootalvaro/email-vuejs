@@ -14,6 +14,9 @@ const state = {
     {from: 'Pepito Perez', to: 'Miguel', asunto: 'Praesent ac lacinia urna, vitae malesuada ligula. Etiam blandit arcu eget odio porta lacinia. Praesent quis urna aliquet, molestie justo fringilla, viverra metus. ', contenido: 'Donec laoreet, felis a facilisis dapibus, nulla libero accumsan enim, vitae viverra massa lorem at elit.', carpeta: 'Inbox', favorite: false},
     {from: 'Pepito Perez', to: 'Santiago', asunto: 'Prueba', contenido: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in nulla iaculis, aliquet felis quis, eleifend sapien. Etiam sollicitudin lobortis dui in porta. Quisque et laoreet nibh. Aliquam non rutrum nulla. Donec facilisis eleifend nulla et tempor. Pellentesque ultricies lorem consectetur iaculis pellentesque. ', carpeta: 'Inbox', favorite: false},
     {from: 'Pepito Perez', to: 'Edwin', asunto: 'Correo', contenido: 'Phasellus sit amet ipsum dui.', carpeta: 'Sent', favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Correo', contenido: 'Aliquam quis tristique dui. Suspendisse potenti.', carpeta: 'Sent', favorite: false},
+    {from: 'Pepito Perez', to: 'Miguel', asunto: 'Correo', contenido: 'Contenido', carpeta: 'Sent', favorite: false},
+    {from: 'Pepito Perez', to: 'Victor',asunto: 'Prueba Vuex - Archivo',contenido:  'Hola mundo', carpeta: 'Sent', favorite: false},
 
   ],
   activeEmail: {}

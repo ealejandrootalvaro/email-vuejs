@@ -9,7 +9,7 @@
       <div class="form-group">
         <label for="">TO: </label><span>{{email.to}}</span><br>
 
-        <label for="">FROM: </label><span>email.from</span><br>
+        <label for="">FROM: </label><span>{{email.from}}</span><br>
 
         <label for="">SUBJECT: </label><span>{{email.asunto}}</span>
 
